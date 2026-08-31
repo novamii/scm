@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-green: #94ce47;
+  --brand-grey: #9aa1ac;
+  --brand-alert: #ff6b6b;
+  --brand-teal: #2b7a78;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fbfcfa;
+  color: #1c2321;
+}
+
+/* キーボードフォーカスを常に可視化する */
+:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
